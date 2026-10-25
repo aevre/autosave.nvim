@@ -2,6 +2,8 @@
 
 Small, reliable per-buffer autosave for Neovim 0.12+.
 
+[简体中文](README.zh-CN.md)
+
 ## Features
 
 - Enabled by default and toggleable at runtime.
