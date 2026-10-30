@@ -60,3 +60,7 @@ autosave.save(buf) -- buf is optional
 ```
 
 Use `:AutosaveToggle` to toggle autosave for the current session. Successful writes are silent by default and optionally reported with `notify = true`; filter and write errors are always reported through `vim.notify()`.
+
+## Development
+
+Run `make check` from the repository root. Configuration, saving, timer debounce, and public API behavior live in focused modules under `lua/autosave/`; the guarded `plugin/autosave.lua` entrypoint only applies defaults. `make test` runs the headless regression suite.

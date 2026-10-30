@@ -60,3 +60,7 @@ autosave.save(buf) -- buf 可省略
 ```
 
 使用 `:AutosaveToggle` 切换当前会话的自动保存状态。保存成功默认静默，可通过 `notify = true` 开启通知；过滤器和写入错误始终通过 `vim.notify()` 报告。
+
+## 开发
+
+在仓库根目录运行 `make check`。配置、保存、定时器防抖和公共 API 行为位于 `lua/autosave/` 下职责明确的模块中；带 guard 的 `plugin/autosave.lua` 入口只应用默认配置。`make test` 会运行 headless 回归测试。

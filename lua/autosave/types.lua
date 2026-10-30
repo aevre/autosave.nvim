@@ -22,4 +22,9 @@
 ---@field is_enabled fun(): boolean enabled
 ---@field save fun(buf?: integer): boolean saved
 
+---@class autosave.Timer
+---@field cancel fun(buf: integer)
+---@field cancel_all fun()
+---@field schedule fun(buf: integer, delay: integer, callback: fun(buf: integer)): boolean
+
 return {}
